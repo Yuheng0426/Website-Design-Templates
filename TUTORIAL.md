@@ -187,6 +187,8 @@ The translations are in:
 Web_Template/wwwroot/js/site.js
 ```
 
+The dropdown menu is generated automatically from the `translations` object. This means beginners do not need to edit the HTML menu when adding or removing languages.
+
 Each translated element has a key:
 
 ```html
@@ -205,6 +207,68 @@ To add or change a translation:
 2. Find the language object, such as `en`, `zh`, `fr`, `es`, or `ja`
 3. Edit the value for the same key
 4. Save and refresh the browser
+
+### Add A New Language
+
+Open:
+
+```text
+Web_Template/wwwroot/js/site.js
+```
+
+Find:
+
+```js
+const translations = {
+```
+
+Copy an existing language block, paste it inside the `translations` object, and change the language code.
+
+Example:
+
+```js
+de: {
+  languageName: "Deutsch",
+  "meta.title": "Digitales Webstudio - Axyronis Studio",
+  "meta.description": "Your German description here.",
+  "nav.home": "Startseite"
+}
+```
+
+Important: this example is shortened. In the real file, the new language must include every key that exists in the English `en` block.
+
+After you add the new language block, the dropdown menu will show it automatically.
+
+### Remove A Language
+
+To remove a language, delete its full block from the `translations` object.
+
+Example: to remove Japanese, delete:
+
+```js
+ja: {
+  languageName: "日本語",
+  ...
+}
+```
+
+After you delete the block, the dropdown menu will stop showing that language automatically.
+
+### Change The Default Language
+
+In `site.js`, find:
+
+```js
+const defaultLanguageCode = "en";
+```
+
+Change `"en"` to another language code that exists in the `translations` object.
+
+Example:
+
+```js
+const defaultLanguageCode = "fr";
+```
 
 ## 8. Add A New Section
 

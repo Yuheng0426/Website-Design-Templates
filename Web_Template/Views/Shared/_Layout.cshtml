@@ -40,17 +40,11 @@
                             <a class="btn btn-primary btn-sm nav-cta" href="/#contact" data-i18n="nav.cta">Start a Project</a>
                         </li>
                         <li class="nav-item dropdown language-switcher">
-                            <!-- Language switcher: update the options here when adding or removing supported languages. -->
+                            <!-- Language switcher: the menu options are generated from the translations object in wwwroot/js/site.js. -->
                             <button class="btn language-button dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span data-language-current>English</span>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="languageDropdown">
-                                <li><button class="dropdown-item" type="button" data-language-option="en">English</button></li>
-                                <li><button class="dropdown-item" type="button" data-language-option="zh">中文</button></li>
-                                <li><button class="dropdown-item" type="button" data-language-option="fr">Français</button></li>
-                                <li><button class="dropdown-item" type="button" data-language-option="es">Español</button></li>
-                                <li><button class="dropdown-item" type="button" data-language-option="ja">日本語</button></li>
-                            </ul>
+                            <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="languageDropdown" data-language-menu></ul>
                         </li>
                     </ul>
                 </div>

@@ -1,7 +1,14 @@
 // Axyronis Studio
 // Interaction script: handles smooth anchor navigation, the language switcher, and the demo inquiry form.
 
-// Translation dictionary: add new languages or edit copy here.
+// Default language: used when there is no saved language or a saved language was removed.
+const defaultLanguageCode = "en";
+
+// Translation dictionary:
+// - To add a language, copy one full language block, paste it inside this object, and change its code and text.
+// - To remove a language, delete its full language block from this object.
+// - The dropdown menu is generated automatically from these language blocks, so you do not edit HTML for language options.
+// - Every language should contain the same translation keys as the English block.
 const translations = {
   en: {
     languageName: "English",
@@ -407,8 +414,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Language switcher: updates text, placeholders, aria labels, meta description, and page title.
-  const languageButtons = document.querySelectorAll("[data-language-option]");
+  const languageMenu = document.querySelector("[data-language-menu]");
   const currentLanguageLabel = document.querySelector("[data-language-current]");
+
+  // Language menu builder: creates dropdown buttons from the translations object.
+  // Beginners can add or remove languages in one place: the translations object above.
+  const buildLanguageMenu = () => {
+    if (!languageMenu) {
+      return;
+    }
+
+    languageMenu.innerHTML = "";
+
+    Object.entries(translations).forEach(([languageCode, dictionary]) => {
+      const item = document.createElement("li");
+      const button = document.createElement("button");
+
+      button.className = "dropdown-item";
+      button.type = "button";
+      button.setAttribute("data-language-option", languageCode);
+      button.textContent = dictionary.languageName || languageCode.toUpperCase();
+
+      item.appendChild(button);
+      languageMenu.appendChild(item);
+    });
+  };
 
   // Language storage: remembers the selected language when localStorage is available.
   const getSavedLanguage = () => {
@@ -428,12 +458,13 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const savedLanguage = getSavedLanguage();
-  const defaultLanguage = translations[savedLanguage] ? savedLanguage : "en";
+  const defaultLanguage = translations[savedLanguage] ? savedLanguage : defaultLanguageCode;
 
   const applyLanguage = (languageCode) => {
-    const dictionary = translations[languageCode] || translations.en;
+    const safeLanguageCode = translations[languageCode] ? languageCode : defaultLanguageCode;
+    const dictionary = translations[safeLanguageCode] || translations[defaultLanguageCode];
 
-    document.documentElement.lang = languageCode;
+    document.documentElement.lang = safeLanguageCode;
     document.title = dictionary["meta.title"];
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -464,20 +495,27 @@ document.addEventListener("DOMContentLoaded", () => {
       currentLanguageLabel.textContent = dictionary.languageName;
     }
 
-    languageButtons.forEach((button) => {
-      const isActive = button.getAttribute("data-language-option") === languageCode;
+    document.querySelectorAll("[data-language-option]").forEach((button) => {
+      const isActive = button.getAttribute("data-language-option") === safeLanguageCode;
       button.classList.toggle("active", isActive);
       button.setAttribute("aria-pressed", String(isActive));
     });
 
-    setSavedLanguage(languageCode);
+    setSavedLanguage(safeLanguageCode);
   };
 
-  languageButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+  buildLanguageMenu();
+
+  if (languageMenu) {
+    languageMenu.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-language-option]");
+      if (!button) {
+        return;
+      }
+
       applyLanguage(button.getAttribute("data-language-option"));
     });
-  });
+  }
 
   applyLanguage(defaultLanguage);
 

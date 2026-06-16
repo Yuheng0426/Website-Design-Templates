@@ -63,7 +63,7 @@ The language switcher currently supports:
 - Spanish
 - Japanese
 
-Translations live in `Web_Template/wwwroot/js/site.js` inside the `translations` object.
+Translations live in `Web_Template/wwwroot/js/site.js` inside the `translations` object. The language dropdown is generated automatically from that object, so adding or deleting a language only requires changing the translation blocks in JavaScript.
 
 ## Learning Guide
 
