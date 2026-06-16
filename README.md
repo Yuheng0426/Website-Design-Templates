@@ -2,6 +2,14 @@
 
 A polished ASP.NET Core MVC website template built around the sample brand **Axyronis Studio**. It is designed for beginners who want to learn how a professional website is organized while still having clean code they can customize and share.
 
+## Live Preview
+
+Open the website directly without downloading:
+
+[View Live Demo](https://yuheng0426.github.io/Website-Design-Templates/)
+
+If the link is not active yet, open the repository settings on GitHub and enable **Pages** with **GitHub Actions** as the source. The included workflow will deploy the `docs/` static demo automatically.
+
 The template includes a premium visual style, responsive layout, source-code comments, and a working language switcher for English, Chinese, French, Spanish, and Japanese.
 
 ## Features
@@ -31,8 +39,13 @@ dotnet run --project .\Web_Template\Web_Template.csproj
 
 ```text
 Website-Design-Templates/
+├── docs/
+│   ├── index.html
+│   ├── css/site.css
+│   └── js/site.js
 ├── README.md
 ├── TUTORIAL.md
+├── scripts/build-static-demo.js
 ├── Web_Template.sln
 └── Web_Template/
     ├── Controllers/
@@ -68,6 +81,18 @@ Translations live in `Web_Template/wwwroot/js/site.js` inside the `translations`
 ## Learning Guide
 
 Read [TUTORIAL.md](./TUTORIAL.md) for a beginner-friendly walkthrough. It explains what each important file does, how to change the brand, how the language system works, and how to customize the design safely.
+
+## Static Demo For GitHub Pages
+
+The ASP.NET Core project is the editable template. The `docs/` folder is a static preview version for GitHub Pages.
+
+After changing the website, regenerate the static preview with:
+
+```powershell
+node .\scripts\build-static-demo.js
+```
+
+Commit both the ASP.NET files and the updated `docs/` files so the live demo stays in sync.
 
 ## Notes About Images
 

@@ -18,6 +18,22 @@ http://localhost:5092
 
 Open that address in your browser.
 
+## 1.1 Open The Online Demo
+
+The GitHub repository also includes a static preview for people who do not want to download the project first:
+
+```text
+https://yuheng0426.github.io/Website-Design-Templates/
+```
+
+This live demo is built from the files in the `docs/` folder.
+
+When you change the ASP.NET template, regenerate the static demo before pushing:
+
+```powershell
+node .\scripts\build-static-demo.js
+```
+
 ## 2. Understand The Main Files
 
 ### `Views/Home/Index.cshtml`
