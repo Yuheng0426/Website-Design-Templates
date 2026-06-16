@@ -28,6 +28,16 @@ https://yuheng0426.github.io/Website-Design-Templates/
 
 This live demo is built from the files in the `docs/` folder.
 
+If the link is not live yet, enable it once in GitHub:
+
+1. Open the repository page.
+2. Select **Settings**.
+3. Select **Pages**.
+4. Set **Source** to **Deploy from a branch**.
+5. Set **Branch** to `main`.
+6. Set **Folder** to `/docs`.
+7. Click **Save** and wait a few minutes.
+
 When you change the ASP.NET template, regenerate the static demo before pushing:
 
 ```powershell
@@ -244,10 +254,10 @@ Example:
 
 ```js
 de: {
-  languageName: "Deutsch",
-  "meta.title": "Digitales Webstudio - Axyronis Studio",
+  languageName: "German",
+  "meta.title": "Digital Web Studio - Axyronis Studio",
   "meta.description": "Your German description here.",
-  "nav.home": "Startseite"
+  "nav.home": "Home"
 }
 ```
 
@@ -263,7 +273,7 @@ Example: to remove Japanese, delete:
 
 ```js
 ja: {
-  languageName: "日本語",
+  languageName: "Japanese",
   ...
 }
 ```

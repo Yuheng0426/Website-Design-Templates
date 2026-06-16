@@ -8,7 +8,15 @@ Open the website directly without downloading:
 
 [View Live Demo](https://yuheng0426.github.io/Website-Design-Templates/)
 
-If the link is not active yet, open the repository settings on GitHub and enable **Pages** with **GitHub Actions** as the source. The included workflow will deploy the `docs/` static demo automatically.
+If the link is not active yet, enable GitHub Pages from the `docs/` folder:
+
+1. Open the repository on GitHub.
+2. Go to **Settings** -> **Pages**.
+3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+4. Set **Branch** to `main` and **Folder** to `/docs`.
+5. Click **Save**.
+
+GitHub usually publishes the site within a few minutes after this one-time setup.
 
 The template includes a premium visual style, responsive layout, source-code comments, and a working language switcher for English, Chinese, French, Spanish, and Japanese.
 
@@ -39,24 +47,24 @@ dotnet run --project .\Web_Template\Web_Template.csproj
 
 ```text
 Website-Design-Templates/
-├── docs/
-│   ├── index.html
-│   ├── css/site.css
-│   └── js/site.js
-├── README.md
-├── TUTORIAL.md
-├── scripts/build-static-demo.js
-├── Web_Template.sln
-└── Web_Template/
-    ├── Controllers/
-    ├── Models/
-    ├── Views/
-    │   ├── Home/
-    │   └── Shared/
-    └── wwwroot/
-        ├── css/site.css
-        ├── js/site.js
-        └── lib/
+|-- docs/
+|   |-- index.html
+|   |-- css/site.css
+|   `-- js/site.js
+|-- README.md
+|-- TUTORIAL.md
+|-- scripts/build-static-demo.js
+|-- Web_Template.sln
+`-- Web_Template/
+    |-- Controllers/
+    |-- Models/
+    |-- Views/
+    |   |-- Home/
+    |   `-- Shared/
+    `-- wwwroot/
+        |-- css/site.css
+        |-- js/site.js
+        `-- lib/
 ```
 
 ## Files Beginners Should Learn First
@@ -85,6 +93,8 @@ Read [TUTORIAL.md](./TUTORIAL.md) for a beginner-friendly walkthrough. It explai
 ## Static Demo For GitHub Pages
 
 The ASP.NET Core project is the editable template. The `docs/` folder is a static preview version for GitHub Pages.
+
+This repository uses GitHub Pages branch publishing instead of a deployment workflow. That keeps the template easier for beginners because GitHub serves the committed files in `docs/` directly.
 
 After changing the website, regenerate the static preview with:
 
