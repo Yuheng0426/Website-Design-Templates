@@ -14,11 +14,38 @@ const translations = {
     languageName: "English",
     "meta.title": "Digital Web Studio - Axyronis Studio",
     "meta.description": "Axyronis Studio helps brands build sharper websites, clearer messaging, and stronger digital experiences.",
+    "auth.meta.title": "Sign In - Axyronis Studio",
     "nav.home": "Home",
     "nav.services": "Services",
     "nav.strategy": "Strategy",
     "nav.growth": "Growth",
+    "nav.login": "Sign In",
     "nav.cta": "Start a Project",
+    "auth.eyebrow": "Secure Access",
+    "auth.title": "A focused entry point for your digital workspace",
+    "auth.description": "Axyronis Studio uses this page as a polished sign-in pattern for products, dashboards, member areas, and client portals. The interface is ready for real authentication, but this template keeps the backend intentionally empty so beginners can learn the right setup path first.",
+    "auth.proof1.kicker": "Clarity",
+    "auth.proof1.title": "Simple provider choices",
+    "auth.proof1.text": "Offer familiar sign-in methods without overwhelming new users.",
+    "auth.proof2.kicker": "Control",
+    "auth.proof2.title": "Ready for real OAuth",
+    "auth.proof2.text": "Connect Google or another provider only after secrets and redirects are configured safely.",
+    "auth.panelLabel": "Sign in form",
+    "auth.card.title": "Sign in to Axyronis Studio",
+    "auth.card.subtitle": "Choose a secure provider or continue with email.",
+    "auth.provider.google": "Continue with Google",
+    "auth.provider.microsoft": "Continue with Microsoft",
+    "auth.provider.github": "Continue with GitHub",
+    "auth.divider": "or use email",
+    "auth.form.email": "Email",
+    "auth.form.emailPlaceholder": "hello@example.com",
+    "auth.form.password": "Password",
+    "auth.form.passwordPlaceholder": "Enter your password",
+    "auth.form.remember": "Remember me",
+    "auth.form.forgot": "Forgot password?",
+    "auth.form.submit": "Sign In",
+    "auth.form.demoMessage": "Demo only. Follow AUTHENTICATION_GUIDE.md before connecting real sign-in.",
+    "auth.note": "Demo only. No account data is sent from this template.",
     "hero.title": "Websites that turn attention into trust, action, and growth",
     "hero.lead": "Axyronis Studio designs focused digital experiences for creators, startups, and growing brands. We combine clear messaging, elegant visual systems, and practical conversion strategy so every page has a reason to exist and a path for visitors to follow.",
     "hero.primaryCta": "Start a Project",
@@ -91,10 +118,37 @@ const translations = {
     languageName: "中文",
     "meta.title": "数字网站工作室 - Axyronis Studio",
     "meta.description": "Axyronis Studio 帮助品牌打造更清晰的信息、更有吸引力的网站和更强的数字体验。",
+    "auth.meta.title": "?? - Axyronis Studio",
     "nav.home": "首页",
     "nav.services": "服务",
     "nav.strategy": "策略",
     "nav.growth": "增长",
+    "nav.login": "??",
+    "auth.eyebrow": "????",
+    "auth.title": "?????????????",
+    "auth.description": "Axyronis Studio ??????????????????????????????????????????????????????????????????????????",
+    "auth.proof1.kicker": "??",
+    "auth.proof1.title": "?????????",
+    "auth.proof1.text": "?????????????????????????",
+    "auth.proof2.kicker": "??",
+    "auth.proof2.title": "?????? OAuth",
+    "auth.proof2.text": "???????????????????? Google ?????????",
+    "auth.panelLabel": "????",
+    "auth.card.title": "?? Axyronis Studio",
+    "auth.card.subtitle": "?????????????????",
+    "auth.provider.google": "?? Google ??",
+    "auth.provider.microsoft": "?? Microsoft ??",
+    "auth.provider.github": "?? GitHub ??",
+    "auth.divider": "?????",
+    "auth.form.email": "??",
+    "auth.form.emailPlaceholder": "hello@example.com",
+    "auth.form.password": "??",
+    "auth.form.passwordPlaceholder": "??????",
+    "auth.form.remember": "???",
+    "auth.form.forgot": "?????",
+    "auth.form.submit": "??",
+    "auth.form.demoMessage": "?????????????????? AUTHENTICATION_GUIDE.md?",
+    "auth.note": "????????????????????",
     "nav.cta": "启动项目",
     "hero.title": "把注意力转化为信任、行动和增长的网站",
     "hero.lead": "Axyronis Studio 为创作者、初创团队和成长型品牌设计专注的数字体验。我们结合清晰的信息、优雅的视觉系统和实用的转化策略，让每个页面都有存在的理由，也让访客知道下一步该做什么。",
@@ -168,10 +222,37 @@ const translations = {
     languageName: "Français",
     "meta.title": "Studio Web Digital - Axyronis Studio",
     "meta.description": "Axyronis Studio aide les marques à créer des sites plus précis, des messages plus clairs et des expériences numériques plus fortes.",
+    "auth.meta.title": "Connexion - Axyronis Studio",
     "nav.home": "Accueil",
     "nav.services": "Services",
     "nav.strategy": "Stratégie",
     "nav.growth": "Croissance",
+    "nav.login": "Connexion",
+    "auth.eyebrow": "Acces securise",
+    "auth.title": "Un point d entree clair pour votre espace de travail numerique",
+    "auth.description": "Axyronis Studio utilise cette page comme modele de connexion soigne pour les produits, tableaux de bord, espaces membres et portails clients. L interface est prete pour une authentification reelle, mais le backend reste volontairement vide afin que les debutants apprennent d abord la bonne methode de configuration.",
+    "auth.proof1.kicker": "Clarte",
+    "auth.proof1.title": "Choix de connexion simples",
+    "auth.proof1.text": "Proposez des methodes de connexion familieres sans submerger les nouveaux utilisateurs.",
+    "auth.proof2.kicker": "Controle",
+    "auth.proof2.title": "Pret pour un vrai OAuth",
+    "auth.proof2.text": "Connectez Google ou un autre fournisseur seulement apres avoir configure les secrets et les redirections en securite.",
+    "auth.panelLabel": "Formulaire de connexion",
+    "auth.card.title": "Connexion a Axyronis Studio",
+    "auth.card.subtitle": "Choisissez un fournisseur securise ou continuez avec votre e-mail.",
+    "auth.provider.google": "Continuer avec Google",
+    "auth.provider.microsoft": "Continuer avec Microsoft",
+    "auth.provider.github": "Continuer avec GitHub",
+    "auth.divider": "ou utilisez l e-mail",
+    "auth.form.email": "E-mail",
+    "auth.form.emailPlaceholder": "hello@example.com",
+    "auth.form.password": "Mot de passe",
+    "auth.form.passwordPlaceholder": "Entrez votre mot de passe",
+    "auth.form.remember": "Se souvenir de moi",
+    "auth.form.forgot": "Mot de passe oublie ?",
+    "auth.form.submit": "Se connecter",
+    "auth.form.demoMessage": "Demo uniquement. Suivez AUTHENTICATION_GUIDE.md avant de connecter une vraie connexion.",
+    "auth.note": "Demo uniquement. Aucune donnee de compte n est envoyee depuis ce modele.",
     "nav.cta": "Lancer un projet",
     "hero.title": "Des sites qui transforment l’attention en confiance, action et croissance",
     "hero.lead": "Axyronis Studio conçoit des expériences numériques ciblées pour les créateurs, les startups et les marques en croissance. Nous associons message clair, système visuel élégant et stratégie de conversion pratique afin que chaque page ait une raison d’exister et un chemin à suivre.",
@@ -245,10 +326,37 @@ const translations = {
     languageName: "Español",
     "meta.title": "Estudio Web Digital - Axyronis Studio",
     "meta.description": "Axyronis Studio ayuda a las marcas a crear sitios más precisos, mensajes más claros y experiencias digitales más fuertes.",
+    "auth.meta.title": "Iniciar sesion - Axyronis Studio",
     "nav.home": "Inicio",
     "nav.services": "Servicios",
     "nav.strategy": "Estrategia",
     "nav.growth": "Crecimiento",
+    "nav.login": "Iniciar sesion",
+    "auth.eyebrow": "Acceso seguro",
+    "auth.title": "Un punto de entrada claro para tu espacio digital",
+    "auth.description": "Axyronis Studio usa esta pagina como un patron de inicio de sesion pulido para productos, paneles, areas de miembros y portales de clientes. La interfaz esta lista para autenticacion real, pero la plantilla mantiene el backend vacio a proposito para que los principiantes aprendan primero la configuracion correcta.",
+    "auth.proof1.kicker": "Claridad",
+    "auth.proof1.title": "Opciones de proveedor simples",
+    "auth.proof1.text": "Ofrece metodos de acceso familiares sin abrumar a los nuevos usuarios.",
+    "auth.proof2.kicker": "Control",
+    "auth.proof2.title": "Listo para OAuth real",
+    "auth.proof2.text": "Conecta Google u otro proveedor solo despues de configurar secretos y redirecciones de forma segura.",
+    "auth.panelLabel": "Formulario de inicio de sesion",
+    "auth.card.title": "Iniciar sesion en Axyronis Studio",
+    "auth.card.subtitle": "Elige un proveedor seguro o continua con correo electronico.",
+    "auth.provider.google": "Continuar con Google",
+    "auth.provider.microsoft": "Continuar con Microsoft",
+    "auth.provider.github": "Continuar con GitHub",
+    "auth.divider": "o usa correo electronico",
+    "auth.form.email": "Correo electronico",
+    "auth.form.emailPlaceholder": "hello@example.com",
+    "auth.form.password": "Contrasena",
+    "auth.form.passwordPlaceholder": "Ingresa tu contrasena",
+    "auth.form.remember": "Recordarme",
+    "auth.form.forgot": "Olvidaste tu contrasena?",
+    "auth.form.submit": "Iniciar sesion",
+    "auth.form.demoMessage": "Solo demostracion. Sigue AUTHENTICATION_GUIDE.md antes de conectar un inicio de sesion real.",
+    "auth.note": "Solo demostracion. Esta plantilla no envia datos de cuenta.",
     "nav.cta": "Iniciar proyecto",
     "hero.title": "Sitios web que convierten la atención en confianza, acción y crecimiento",
     "hero.lead": "Axyronis Studio diseña experiencias digitales enfocadas para creadores, startups y marcas en crecimiento. Combinamos mensajes claros, sistemas visuales elegantes y estrategia de conversión práctica para que cada página tenga una razón de existir y un camino para seguir.",
@@ -322,10 +430,37 @@ const translations = {
     languageName: "日本語",
     "meta.title": "デジタルWebスタジオ - Axyronis Studio",
     "meta.description": "Axyronis Studioは、より鋭いWebサイト、明確なメッセージ、強いデジタル体験をブランドに提供します。",
+    "auth.meta.title": "????? - Axyronis Studio",
     "nav.home": "ホーム",
     "nav.services": "サービス",
     "nav.strategy": "戦略",
     "nav.growth": "成長",
+    "nav.login": "?????",
+    "auth.eyebrow": "???????",
+    "auth.title": "?????????????????????",
+    "auth.description": "Axyronis Studio ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+    "auth.proof1.kicker": "???",
+    "auth.proof1.title": "???????????",
+    "auth.proof1.text": "?????????????????????????????????",
+    "auth.proof2.kicker": "??",
+    "auth.proof2.title": "??? OAuth ?????",
+    "auth.proof2.text": "????????????????????????Google ????????????????",
+    "auth.panelLabel": "?????????",
+    "auth.card.title": "Axyronis Studio ??????",
+    "auth.card.subtitle": "????????????????????????",
+    "auth.provider.google": "Google ???",
+    "auth.provider.microsoft": "Microsoft ???",
+    "auth.provider.github": "GitHub ???",
+    "auth.divider": "?????????",
+    "auth.form.email": "???",
+    "auth.form.emailPlaceholder": "hello@example.com",
+    "auth.form.password": "?????",
+    "auth.form.passwordPlaceholder": "????????",
+    "auth.form.remember": "?????????",
+    "auth.form.forgot": "?????????????",
+    "auth.form.submit": "?????",
+    "auth.form.demoMessage": "?????????????????????? AUTHENTICATION_GUIDE.md ?????????",
+    "auth.note": "?????????????????????????????????",
     "nav.cta": "相談する",
     "hero.title": "注目を信頼、行動、成長へ変えるWebサイト",
     "hero.lead": "Axyronis Studioは、クリエイター、スタートアップ、成長中のブランドのために、焦点の合ったデジタル体験を設計します。明確なメッセージ、美しいビジュアルシステム、実用的なコンバージョン戦略を組み合わせ、すべてのページに目的と次の導線を与えます。",
@@ -465,7 +600,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const dictionary = translations[safeLanguageCode] || translations[defaultLanguageCode];
 
     document.documentElement.lang = safeLanguageCode;
-    document.title = dictionary["meta.title"];
+    const titleElement = document.querySelector("[data-i18n-title]");
+    const titleKey = titleElement?.getAttribute("data-i18n-title") || "meta.title";
+    document.title = dictionary[titleKey] || dictionary["meta.title"];
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const key = element.getAttribute("data-i18n");
@@ -534,6 +671,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       templateForm.reset();
+    });
+  }
+
+  // Demo authentication controls: show a learning message instead of pretending to sign users in.
+  // Replace these handlers with real authentication routes after following AUTHENTICATION_GUIDE.md.
+  const authForm = document.querySelector("[data-auth-form]");
+  const authDemoControls = document.querySelectorAll("[data-auth-demo]");
+
+  const showAuthDemoMessage = () => {
+    const activeLanguage = getSavedLanguage() || document.documentElement.lang || "en";
+    const message = authForm?.querySelector(".form-message") || document.querySelector(".auth-panel .form-message");
+    if (message) {
+      message.textContent = translations[activeLanguage]?.["auth.form.demoMessage"] || translations.en["auth.form.demoMessage"];
+    }
+  };
+
+  authDemoControls.forEach((control) => {
+    control.addEventListener("click", (event) => {
+      event.preventDefault();
+      showAuthDemoMessage();
+    });
+  });
+
+  if (authForm) {
+    authForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      showAuthDemoMessage();
+      authForm.reset();
     });
   }
 });

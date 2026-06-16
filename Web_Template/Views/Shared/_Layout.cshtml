@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Axyronis Studio helps brands build sharper websites, clearer messaging, and stronger digital experiences." data-i18n-attr="content:meta.description" />
-    <title data-i18n-title="meta.title">@ViewData["Title"] - Axyronis Studio</title>
+    <title data-i18n-title="@(ViewData["I18nTitleKey"] ?? "meta.title")">@ViewData["Title"] - Axyronis Studio</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Web_Template.styles.css" asp-append-version="true" />
@@ -35,6 +35,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/#growth" data-i18n="nav.growth">Growth</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login" data-i18n="nav.login">Sign In</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-primary btn-sm nav-cta" href="/#contact" data-i18n="nav.cta">Start a Project</a>
@@ -71,6 +74,7 @@
                     <a href="/#services" data-i18n="nav.services">Services</a>
                     <a href="/#strategy" data-i18n="nav.strategy">Strategy</a>
                     <a href="/#growth" data-i18n="nav.growth">Growth</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Login" data-i18n="nav.login">Sign In</a>
                 </div>
             </div>
             <div class="footer-bottom">

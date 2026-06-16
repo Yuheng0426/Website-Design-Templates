@@ -1,0 +1,95 @@
+@{
+    ViewData["Title"] = "Sign In";
+    ViewData["I18nTitleKey"] = "auth.meta.title";
+}
+
+<!--
+    Login page map:
+    - This page is a front-end authentication template only.
+    - The provider buttons are demo controls and do not send login data.
+    - See AUTHENTICATION_GUIDE.md before connecting Google, Microsoft, GitHub, or email sign-in.
+    - Translation markers connect visible text to wwwroot/js/site.js.
+-->
+
+<section class="auth-section">
+    <div class="container">
+        <div class="auth-grid">
+            <div class="auth-copy">
+                <p class="eyebrow" data-i18n="auth.eyebrow">Secure Access</p>
+                <!-- Login headline: replace this if the product name or user promise changes. -->
+                <h1 data-i18n="auth.title">A focused entry point for your digital workspace</h1>
+                <p data-i18n="auth.description">
+                    Axyronis Studio uses this page as a polished sign-in pattern for products, dashboards, member areas,
+                    and client portals. The interface is ready for real authentication, but this template keeps the
+                    backend intentionally empty so beginners can learn the right setup path first.
+                </p>
+                <div class="auth-proof-grid">
+                    <!-- Trust notes: keep these short so the login page stays calm and easy to scan. -->
+                    <article>
+                        <span data-i18n="auth.proof1.kicker">Clarity</span>
+                        <strong data-i18n="auth.proof1.title">Simple provider choices</strong>
+                        <p data-i18n="auth.proof1.text">Offer familiar sign-in methods without overwhelming new users.</p>
+                    </article>
+                    <article>
+                        <span data-i18n="auth.proof2.kicker">Control</span>
+                        <strong data-i18n="auth.proof2.title">Ready for real OAuth</strong>
+                        <p data-i18n="auth.proof2.text">Connect Google or another provider only after secrets and redirects are configured safely.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="auth-panel" aria-label="Sign in form" data-i18n-attr="aria-label:auth.panelLabel">
+                <div class="auth-panel-header">
+                    <span class="brand-logo" aria-hidden="true">A</span>
+                    <div>
+                        <h2 data-i18n="auth.card.title">Sign in to Axyronis Studio</h2>
+                        <p data-i18n="auth.card.subtitle">Choose a secure provider or continue with email.</p>
+                    </div>
+                </div>
+
+                <div class="provider-stack">
+                    <!-- Provider buttons: replace data-auth-demo with real auth links after following AUTHENTICATION_GUIDE.md. -->
+                    <button class="provider-button google-provider" type="button" data-auth-demo="Google">
+                        <span class="provider-icon" aria-hidden="true">G</span>
+                        <span data-i18n="auth.provider.google">Continue with Google</span>
+                    </button>
+                    <button class="provider-button" type="button" data-auth-demo="Microsoft">
+                        <span class="provider-icon" aria-hidden="true">M</span>
+                        <span data-i18n="auth.provider.microsoft">Continue with Microsoft</span>
+                    </button>
+                    <button class="provider-button" type="button" data-auth-demo="GitHub">
+                        <span class="provider-icon" aria-hidden="true">GH</span>
+                        <span data-i18n="auth.provider.github">Continue with GitHub</span>
+                    </button>
+                </div>
+
+                <div class="auth-divider">
+                    <span data-i18n="auth.divider">or use email</span>
+                </div>
+
+                <form class="auth-form" data-auth-form>
+                    <!-- Email form: connect these fields to ASP.NET Core Identity only after adding server-side validation. -->
+                    <label>
+                        <span data-i18n="auth.form.email">Email</span>
+                        <input type="email" name="email" placeholder="hello@example.com" data-i18n-placeholder="auth.form.emailPlaceholder" autocomplete="email" required />
+                    </label>
+                    <label>
+                        <span data-i18n="auth.form.password">Password</span>
+                        <input type="password" name="password" placeholder="Enter your password" data-i18n-placeholder="auth.form.passwordPlaceholder" autocomplete="current-password" required />
+                    </label>
+                    <div class="auth-options">
+                        <label class="auth-check">
+                            <input type="checkbox" name="remember" />
+                            <span data-i18n="auth.form.remember">Remember me</span>
+                        </label>
+                        <a href="#" data-auth-demo="Password reset" data-i18n="auth.form.forgot">Forgot password?</a>
+                    </div>
+                    <button class="btn btn-primary auth-submit" type="submit" data-i18n="auth.form.submit">Sign In</button>
+                    <p class="form-message" role="status" aria-live="polite"></p>
+                </form>
+
+                <p class="auth-note" data-i18n="auth.note">Demo only. No account data is sent from this template.</p>
+            </div>
+        </div>
+    </div>
+</section>

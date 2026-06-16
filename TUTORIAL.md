@@ -91,6 +91,7 @@ This file controls small browser interactions:
 - Smooth scrolling
 - Language switching
 - Demo contact form message
+- Demo login page messages
 
 The translation text is stored inside the `translations` object.
 
@@ -324,10 +325,29 @@ Every language must have the same keys.
 - Editing generated files inside `bin/` or `obj/`
 - Forgetting to update all languages after adding a new `data-i18n` key
 - Removing Bootstrap scripts while still using the dropdown menu
+- Turning the demo sign-in buttons into real login without server-side authentication
 - Changing too many files at once
 - Uploading `.vs/`, `bin/`, or `obj/` folders to GitHub
 
-## 10. Suggested Practice Tasks
+## 10. Understand The Sign-In Page
+
+Open:
+
+```text
+Web_Template/Views/Home/Login.cshtml
+```
+
+This page is a visual authentication template. It includes Google, Microsoft, GitHub, and email sign-in controls, but it does not include a real login system.
+
+Before connecting real login, read:
+
+```text
+AUTHENTICATION_GUIDE.md
+```
+
+Important: GitHub Pages can preview the design, but it cannot run a real ASP.NET Core login backend.
+
+## 11. Suggested Practice Tasks
 
 Try these in order:
 
@@ -337,5 +357,6 @@ Try these in order:
 4. Add one new service card.
 5. Translate that new card into all supported languages.
 6. Replace the hero CSS artwork with your own image.
+7. Customize the sign-in page text.
 
 Small steps make the code easier to understand. When something breaks, undo the last change and try again more slowly.

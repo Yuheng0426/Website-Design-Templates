@@ -16,10 +16,12 @@ const staticizeAspLinks = (content) =>
     .replace(/\sasp-area=""/g, "")
     .replace(/\sasp-controller="Home"\sasp-action="Index"/g, ' href="./"')
     .replace(/\sasp-controller="Home"\sasp-action="Privacy"/g, ' href="./#principles"')
-    .replace(/href="\/#/g, 'href="#');
+    .replace(/\sasp-controller="Home"\sasp-action="Login"/g, ' href="./login.html"')
+    .replace(/href="\/#/g, 'href="./#');
 
 const layout = read(path.join(projectRoot, "Views", "Shared", "_Layout.cshtml"));
 const home = stripRazorHeader(read(path.join(projectRoot, "Views", "Home", "Index.cshtml")));
+const login = stripRazorHeader(read(path.join(projectRoot, "Views", "Home", "Login.cshtml")));
 const css = read(path.join(projectRoot, "wwwroot", "css", "site.css"));
 const js = read(path.join(projectRoot, "wwwroot", "js", "site.js"));
 
@@ -37,13 +39,13 @@ const head = headMatch[0]
   .replace(/<link rel="stylesheet" href="~\/css\/site\.css" asp-append-version="true" \/>/, '<link rel="stylesheet" href="./css/site.css" />')
   .replace(/\s*<link rel="stylesheet" href="~\/Web_Template\.styles\.css" asp-append-version="true" \/>/, "");
 
-const html = `<!DOCTYPE html>
+const buildPage = (body, title, titleKey) => `<!DOCTYPE html>
 <html lang="en">
-${head}
+${head.replace(/<title[\s\S]*?<\/title>/, `<title data-i18n-title="${titleKey}">${title} - Axyronis Studio</title>`)}
 <body>
 ${staticizeAspLinks(headerMatch[0])}
 <main role="main">
-${home}
+${body}
 </main>
 ${staticizeAspLinks(footerMatch[0])}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -55,7 +57,8 @@ ${staticizeAspLinks(footerMatch[0])}
 ensureDir(path.join(docsRoot, "css"));
 ensureDir(path.join(docsRoot, "js"));
 
-fs.writeFileSync(path.join(docsRoot, "index.html"), html, "utf8");
+fs.writeFileSync(path.join(docsRoot, "index.html"), buildPage(home, "Digital Web Studio", "meta.title"), "utf8");
+fs.writeFileSync(path.join(docsRoot, "login.html"), buildPage(login, "Sign In", "auth.meta.title"), "utf8");
 fs.writeFileSync(path.join(docsRoot, "css", "site.css"), css, "utf8");
 fs.writeFileSync(path.join(docsRoot, "js", "site.js"), js, "utf8");
 

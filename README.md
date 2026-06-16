@@ -27,6 +27,7 @@ The template includes a premium visual style, responsive layout, source-code com
 - Responsive design for desktop and mobile
 - High-end color system using CSS variables
 - Multilingual front-end content switcher
+- Demo sign-in page with Google, Microsoft, GitHub, and email UI patterns
 - Beginner-friendly comments in the source code
 - No required external image assets
 
@@ -49,8 +50,10 @@ dotnet run --project .\Web_Template\Web_Template.csproj
 Website-Design-Templates/
 |-- docs/
 |   |-- index.html
+|   |-- login.html
 |   |-- css/site.css
 |   `-- js/site.js
+|-- AUTHENTICATION_GUIDE.md
 |-- README.md
 |-- TUTORIAL.md
 |-- scripts/build-static-demo.js
@@ -60,6 +63,7 @@ Website-Design-Templates/
     |-- Models/
     |-- Views/
     |   |-- Home/
+    |   |   `-- Login.cshtml
     |   `-- Shared/
     `-- wwwroot/
         |-- css/site.css
@@ -70,6 +74,7 @@ Website-Design-Templates/
 ## Files Beginners Should Learn First
 
 - `Web_Template/Views/Home/Index.cshtml`: homepage sections and visible content.
+- `Web_Template/Views/Home/Login.cshtml`: demo sign-in page and provider button markup.
 - `Web_Template/Views/Shared/_Layout.cshtml`: navigation, language dropdown, footer, and shared page shell.
 - `Web_Template/wwwroot/css/site.css`: colors, spacing, cards, buttons, responsive layout, and visual artwork.
 - `Web_Template/wwwroot/js/site.js`: language translations, smooth scrolling, and demo form behavior.
@@ -89,6 +94,8 @@ Translations live in `Web_Template/wwwroot/js/site.js` inside the `translations`
 ## Learning Guide
 
 Read [TUTORIAL.md](./TUTORIAL.md) for a beginner-friendly walkthrough. It explains what each important file does, how to change the brand, how the language system works, and how to customize the design safely.
+
+Read [AUTHENTICATION_GUIDE.md](./AUTHENTICATION_GUIDE.md) before connecting Google sign-in or any other real login provider.
 
 ## Static Demo For GitHub Pages
 
