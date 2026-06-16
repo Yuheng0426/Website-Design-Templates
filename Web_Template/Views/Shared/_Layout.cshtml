@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Axyronis Studio helps brands build sharper websites, clearer messaging, and stronger digital experiences." data-i18n-attr="content:meta.description" />
+    <title data-i18n-title="meta.title">@ViewData["Title"] - Axyronis Studio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Web_Template.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-nav">
+            <div class="container">
+                <!-- Brand block: change the logo letter and studio name here. -->
+                <a class="navbar-brand brand-mark" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span class="brand-logo" aria-hidden="true">A</span>
+                    <span>Axyronis Studio</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse justify-content-end">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" data-i18n="nav.home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#services" data-i18n="nav.services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#strategy" data-i18n="nav.strategy">Strategy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#growth" data-i18n="nav.growth">Growth</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary btn-sm nav-cta" href="/#contact" data-i18n="nav.cta">Start a Project</a>
+                        </li>
+                        <li class="nav-item dropdown language-switcher">
+                            <!-- Language switcher: update the options here when adding or removing supported languages. -->
+                            <button class="btn language-button dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span data-language-current>English</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="languageDropdown">
+                                <li><button class="dropdown-item" type="button" data-language-option="en">English</button></li>
+                                <li><button class="dropdown-item" type="button" data-language-option="zh">中文</button></li>
+                                <li><button class="dropdown-item" type="button" data-language-option="fr">Français</button></li>
+                                <li><button class="dropdown-item" type="button" data-language-option="es">Español</button></li>
+                                <li><button class="dropdown-item" type="button" data-language-option="ja">日本語</button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <!-- Footer brand block: keep this aligned with the header brand. -->
+                    <a class="brand-mark footer-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <span class="brand-logo" aria-hidden="true">A</span>
+                        <span>Axyronis Studio</span>
+                    </a>
+                    <p data-i18n="footer.description">Digital strategy, web design, and conversion-focused site systems for ambitious brands.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/#services" data-i18n="nav.services">Services</a>
+                    <a href="/#strategy" data-i18n="nav.strategy">Strategy</a>
+                    <a href="/#growth" data-i18n="nav.growth">Growth</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <!-- Copyright line: update the year or legal name if needed. -->
+                <span data-i18n="footer.copyright">&copy; 2026 Axyronis Studio. Built for clear digital growth.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

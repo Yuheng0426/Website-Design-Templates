@@ -1,0 +1,172 @@
+@{
+    ViewData["Title"] = "Digital Web Studio";
+}
+
+<!--
+    Page content map:
+    - Hero section: main brand promise and primary calls to action.
+    - Services section: three core benefits visitors can understand quickly.
+    - Strategy section: explains what makes a website more persuasive.
+    - Growth section: shows practical ways to improve and maintain a site.
+    - Contact section: simple lead form for project inquiries.
+    - Translation markers: data-i18n and data-i18n-placeholder connect text to wwwroot/js/site.js.
+-->
+
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <p class="eyebrow">Axyronis Studio</p>
+                <!-- Hero headline: replace this when changing the main positioning. -->
+                <h1 data-i18n="hero.title">Websites that turn attention into trust, action, and growth</h1>
+                <p class="hero-lead" data-i18n="hero.lead">
+                    Axyronis Studio designs focused digital experiences for creators, startups, and growing brands.
+                    We combine clear messaging, elegant visual systems, and practical conversion strategy so every page
+                    has a reason to exist and a path for visitors to follow.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary btn-lg" href="#contact" data-i18n="hero.primaryCta">Start a Project</a>
+                    <a class="btn btn-outline-dark btn-lg" href="#strategy" data-i18n="hero.secondaryCta">See Our Approach</a>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Axyronis Studio workspace preview" data-i18n-attr="aria-label:hero.visualLabel">
+                <!-- Hero visual: change .hero-image in site.css to replace this background. -->
+                <div class="image-card hero-image"></div>
+                <div class="floating-note">
+                    <span class="note-number">01</span>
+                    <span data-i18n="hero.note">Clarity before decoration</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="section-block">
+    <div class="container">
+        <div class="section-heading">
+            <p class="eyebrow" data-i18n="services.eyebrow">Services</p>
+            <!-- Services headline: keep this benefit-driven and easy to scan. -->
+            <h2 data-i18n="services.title">What a stronger website should do for your brand</h2>
+            <p data-i18n="services.description">A good website is more than a place to publish information. It should guide attention, build confidence, and make the next step obvious.</p>
+        </div>
+
+        <div class="feature-grid">
+            <!-- Service cards: duplicate or rewrite these cards to match the studio offer. -->
+            <article class="feature-card">
+                <span class="feature-icon">01</span>
+                <h3 data-i18n="services.card1.title">Make the offer clear</h3>
+                <p data-i18n="services.card1.text">Visitors should understand who you help, what you provide, and why it matters within the first few seconds.</p>
+            </article>
+            <article class="feature-card">
+                <span class="feature-icon">02</span>
+                <h3 data-i18n="services.card2.title">Create visual credibility</h3>
+                <p data-i18n="services.card2.text">Consistent spacing, typography, color, and imagery make the site feel reliable before a visitor reads every detail.</p>
+            </article>
+            <article class="feature-card">
+                <span class="feature-icon">03</span>
+                <h3 data-i18n="services.card3.title">Guide meaningful action</h3>
+                <p data-i18n="services.card3.text">Every page should support a clear decision, whether that means booking a call, reading a case study, or sending an inquiry.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="strategy" class="section-block showcase-section">
+    <div class="container">
+        <div class="showcase-grid">
+            <div>
+                <p class="eyebrow" data-i18n="strategy.eyebrow">Strategy</p>
+                <!-- Strategy section: explain how the website attracts and keeps attention. -->
+                <h2 data-i18n="strategy.title">Attraction starts with relevance, not noise</h2>
+                <p data-i18n="strategy.description">
+                    The most effective sites speak to a specific audience, answer the right questions,
+                    and remove friction from the visitor journey. Axyronis Studio shapes each section around
+                    message clarity, proof, rhythm, and action so the experience feels intentional from top to bottom.
+                </p>
+                <ul class="check-list">
+                    <li data-i18n="strategy.point1">Lead with a concrete promise instead of vague slogans</li>
+                    <li data-i18n="strategy.point2">Use proof, examples, and outcomes to support trust</li>
+                    <li data-i18n="strategy.point3">Keep navigation simple so visitors always know where to go next</li>
+                </ul>
+            </div>
+            <div class="showcase-panel">
+                <!-- Strategy visual: change .showcase-image in site.css to replace this background. -->
+                <div class="image-card showcase-image"></div>
+                <div class="metric-row">
+                    <div>
+                        <strong data-i18n="strategy.metric1.value">5 sec</strong>
+                        <span data-i18n="strategy.metric1.label">To explain the core value</span>
+                    </div>
+                    <div>
+                        <strong data-i18n="strategy.metric2.value">1 path</strong>
+                        <span data-i18n="strategy.metric2.label">For the primary user action</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="growth" class="section-block process-section">
+    <div class="container">
+        <div class="section-heading">
+            <p class="eyebrow" data-i18n="growth.eyebrow">Growth</p>
+            <h2 data-i18n="growth.title">How to keep improving after launch</h2>
+            <p data-i18n="growth.description">A website becomes stronger when it is reviewed, measured, and refined with real user behavior in mind.</p>
+        </div>
+
+        <div class="process-grid">
+            <!-- Growth cards: these describe ongoing improvement principles for a real studio site. -->
+            <article>
+                <span data-i18n="growth.card1.kicker">Focus</span>
+                <h3 data-i18n="growth.card1.title">Sharpen the message</h3>
+                <p data-i18n="growth.card1.text">Review headlines and section copy often. Strong pages remove generic language and make the value easy to repeat.</p>
+            </article>
+            <article>
+                <span data-i18n="growth.card2.kicker">Trust</span>
+                <h3 data-i18n="growth.card2.title">Add stronger proof</h3>
+                <p data-i18n="growth.card2.text">Use testimonials, results, process notes, screenshots, and project stories to make claims easier to believe.</p>
+            </article>
+            <article>
+                <span data-i18n="growth.card3.kicker">Flow</span>
+                <h3 data-i18n="growth.card3.title">Reduce friction</h3>
+                <p data-i18n="growth.card3.text">Shorten forms, simplify choices, clarify buttons, and make sure the most important action is always visible.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section-block contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div>
+                <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+                <!-- Contact section: describe the inquiry experience and expected project fit. -->
+                <h2 data-i18n="contact.title">Bring a sharper digital presence to life</h2>
+                <p data-i18n="contact.description">
+                    Share what you are building, what your audience needs, and what the website should help people do.
+                    Axyronis Studio uses those details to shape a focused path from first impression to meaningful action.
+                </p>
+            </div>
+
+            <form class="contact-form" data-template-form>
+                <!-- Demo form fields: connect these to a backend when real submissions are needed. -->
+                <label>
+                    <span data-i18n="contact.form.name">Name</span>
+                    <input type="text" name="name" placeholder="Your name" data-i18n-placeholder="contact.form.namePlaceholder" required />
+                </label>
+                <label>
+                    <span data-i18n="contact.form.email">Email</span>
+                    <input type="email" name="email" placeholder="hello@example.com" data-i18n-placeholder="contact.form.emailPlaceholder" required />
+                </label>
+                <label>
+                    <span data-i18n="contact.form.goal">Project Goal</span>
+                    <textarea name="message" rows="4" placeholder="Tell us what the website needs to achieve" data-i18n-placeholder="contact.form.goalPlaceholder"></textarea>
+                </label>
+                <button class="btn btn-primary" type="submit" data-i18n="contact.form.submit">Request a Studio Review</button>
+                <p class="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</section>
