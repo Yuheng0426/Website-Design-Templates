@@ -75,4 +75,4 @@ This template uses CSS artwork for the main visuals instead of external image li
 
 ## License
 
-You can use this repository as a learning template and customize it for your own projects. If you publish a modified version, update the README so users understand what changed.
+This project uses the MIT License from the repository. You can use this repository as a learning template and customize it for your own projects. If you publish a modified version, update the README so users understand what changed.
